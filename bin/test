@@ -22,6 +22,10 @@ echo xxxxxxxxxxx
 ls -lisa .profile.d/
 echo xxxxxxxxxxx
 cat .profile.d/maven.sh
+echo xxxxxxxxxxx
+echo $M2_HOME
+echo $MAVEN_OPTS
+echo $PATH
 
 mvn_settings_opt="$(_mvn_settings_opt ${BUILD_DIR} ${BUILD_DIR})"
 
