@@ -16,6 +16,13 @@ export_env $ENV_DIR "." "JAVA_OPTS|JAVA_TOOL_OPTIONS"
 
 cd $BUILD_DIR
 
+pwd
+ls -lisa 
+echo xxxxxxxxxxx
+ls -lisa .profile.d/
+echo xxxxxxxxxxx
+cat .profile.d/maven.sh
+
 mvn_settings_opt="$(_mvn_settings_opt ${BUILD_DIR} ${BUILD_DIR})"
 
 if has_maven_wrapper $BUILD_DIR; then
