@@ -101,6 +101,9 @@ run_mvn() {
 
   local cache_status="$(get_cache_status ${mavenInstallDir})"
   let start=$(nowms)
+  echo ${mvn_settings_opt}
+  ls -lisa ${mavenInstallDir}/.m2
+  cat ${mavenInstallDir}/.m2/settings.xml
   ${mavenExe} -DoutputFile=target/mvn-dependency-list.log -B ${mvn_settings_opt} ${mvnOpts} | indent
 
   if [ "${PIPESTATUS[*]}" != "0 0" ]; then
